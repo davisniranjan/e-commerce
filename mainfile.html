@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ecommerceApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online E-commerce Website</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
+  <script src="main.js"></script>
+</head>
+<body ng-controller="MainController">
+  <header>
+    <h1>Online E-commerce Website</h1>
+    <nav>
+      <ul>
+        <li><a href="#/">Home</a></li>
+        <li><a href="#/products">Products</a></li>
+        <li><a href="#/contact">Contact</a></li>
+        <li><a href="#/cart">Cart ({{cartItems.length}})</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <ng-view></ng-view>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Online E-commerce Website. All rights reserved.</p>
+  </footer>
+</body>
+</html>
